@@ -9,12 +9,13 @@
 <template>
   <div id="app">
     <h1>{{ message }}</h1>
-    <demo></demo>
+    <demo v-bind="demoObj"></demo>
   </div>
 </template>
 
 <script>
 import Demo from '@/components/demo'
+
 export default {
   name: 'App',
   components: {
@@ -22,7 +23,11 @@ export default {
   },
   data: function() {
     return {
-      message: 'Hello'
+      message: 'Hello',
+      demoObj:{
+        name: 'wong',
+        age: 18
+      }
     }
   },
   beforeCreate: function() {

@@ -7,12 +7,17 @@
  * @FilePath: \vuecook\src\components\demo.vue
 -->
 <template>
-    <div class="container">nihao</div>
+    <div class="container">
+        <input type="text" v-bind="$attrs" v-model="$attrs.name" />
+    </div>
 </template>
 
 <script>
 export default {
-    
+    inheritAttrs: false,
+    created(){
+        console.log(this.$attrs)
+    }
 }
 </script>
 <style lang="scss" scoped>
